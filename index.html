@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNAL PROCESSING USING PYTHON</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F0EBF8;
+        }
+        .google-form-container {
+            max-width: 640px;
+            margin: 1rem auto;
+            transition: opacity 0.5s ease-out;
+        }
+        .form-card {
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid #dadce0;
+            margin-bottom: 12px;
+        }
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .form-header-bar {
+            background-color: #673AB7;
+            height: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .required-star::after {
+            content: ' *';
+            color: #d93025;
+        }
+        .google-input-container {
+            margin-top: 1.5rem;
+        }
+        .google-input, .google-textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 8px 0;
+            font-size: 14px;
+            background-color: transparent;
+            transition: all 0.2s;
+            resize: none;
+        }
+        .google-input:focus, .google-textarea:focus {
+            outline: none;
+            border-bottom: 2px solid #673AB7;
+        }
+        .google-radio-group {
+            margin-top: 1rem;
+        }
+        .google-radio-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+        }
+        .google-radio {
+            margin-right: 0.75rem;
+            accent-color: #673AB7;
+        }
+        .error-message {
+            color: #d93025;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none; /* Initially hidden */
+        }
+        .form-card.has-error {
+            border-color: #d93025;
+        }
+        #prank-video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: none; /* Controlled by JS */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        #prank-video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="google-form-container">
+        <form id="prank-form">
+            <div class="form-card">
+                <img src="https://lh3.googleusercontent.com/u/0/d/1O0yT1X4q-Y4E_Yl9K8y-G7W1a3Yd_lXo=w1920-h1080" alt="Event Banner" class="header-image">
+                <div class="p-6">
+                    <h1 class="text-3xl text-[#202124]">SIGNAL PROCESSING USING PYTHON</h1>
+                    <div class="text-sm mt-4 text-[#202124]">
+                        <p class="mb-3">The name and photo associated with your Google account will be recorded when you upload files and submit this form. Your email is not part of your response.</p>
+                        <hr class="my-4">
+                        <p class="font-medium text-red-600">* Indicates required question</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-card" id="email-card">
+                <div class="p-6">
+                    <label for="email" class="text-base font-medium required-star text-[#202124]">Email</label>
+                    <div class="google-input-container">
+                        <input type="email" id="email" class="google-input" placeholder="Your email" required>
+                    </div>
+                    <div class="error-message">This is a required question</div>
+                </div>
+            </div>
+            
+            <div class="form-card" id="name-card">
+                <div class="p-6">
+                    <label for="name" class="text-base font-medium required-star text-[#202124]">Full Name</label>
+                    <div class="google-input-container">
+                        <input type="text" id="name" class="google-input" placeholder="Your answer" required>
+                    </div>
+                     <div class="error-message">This is a required question</div>
+                </div>
+            </div>
+
+
+            <div class="form-card" id="designation-card">
+                <div class="p-6">
+                    <label for="designation" class="text-base font-medium required-star text-[#202124]">Designation</label>
+                    <div class="google-input-container">
+                        <input type="text" id="designation" class="google-input" placeholder="Your answer" required>
+                    </div>
+                    <div class="error-message">This is a required question</div>
+                </div>
+            </div>
+
+
+            <div class="form-card" id="institution-card">
+                <div class="p-6">
+                    <label for="institution" class="text-base font-medium required-star text-[#202124]">Institution</label>
+                    <div class="google-input-container">
+                        <input type="text" id="institution" class="google-input" placeholder="Your answer" required>
+                    </div>
+                    <div class="error-message">This is a required question</div>
+                </div>
+            </div>
+
+
+            <div class="form-card" id="phone-card">
+                <div class="p-6">
+                    <label for="phone" class="text-base font-medium required-star text-[#202124]">Phone Number</label>
+                    <div class="google-input-container">
+                        <input type="tel" id="phone" class="google-input" placeholder="Your answer" required>
+                    </div>
+                    <div class="error-message">This is a required question</div>
+                </div>
+            </div>
+            
+            <div class="form-card" id="ieee-member-card">
+                <div class="p-6">
+                    <p class="text-base font-medium required-star text-[#202124]">Are you an IEEE Member?</p>
+                    <div class="google-radio-group">
+                        <label class="google-radio-label">
+                            <input type="radio" name="ieee-member" value="yes" class="google-radio" required> Yes
+                        </label>
+                        <label class="google-radio-label">
+                            <input type="radio" name="ieee-member" value="no" class="google-radio" required> No
+                        </label>
+                    </div>
+                    <div class="error-message">This is a required question</div>
+                </div>
+            </div>
+
+
+            <div class="form-card" id="ieee-id-card" style="display: none;">
+                <div class="p-6">
+                    <label for="ieee-id" class="text-base font-medium required-star text-[#202124]">IEEE Membership ID</label>
+                    <div class="google-input-container">
+                        <input type="text" id="ieee-id" class="google-input" placeholder="Your answer">
+                    </div>
+                    <div class="error-message">This is a required question</div>
+                </div>
+            </div>
+
+
+
+
+            <div class="flex justify-between items-center mt-6">
+                <button type="submit" class="px-6 py-2 bg-[#673AB7] text-white rounded font-medium text-sm hover:bg-[#5e35b1] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#673AB7]">Next</button>
+                <button type="button" onclick="document.getElementById('prank-form').reset(); handleIeeeMemberChange();" class="text-sm text-[#673AB7] hover:underline">Clear form</button>
+            </div>
+        </form>
+    </div>
+    
+    <div id="prank-video-container">
+        <video id="prank-video" loop controls playsinline>
+            <source src="https://raw.githubusercontent.com/alfin-7736/Signal-Processing-using-python-/main/Orange%20and%20White%20Illustrative%20April%20Fool's%20Day%20Instagram%20Reel_20251006_122342_0001.mp4" type="video/mp4">
+            Your browser does not support the video tag, but you've been pranked!
+        </video>
+    </div>
+
+
+    <script>
+        const form = document.getElementById('prank-form');
+        const formContainer = document.querySelector('.google-form-container');
+        const ieeeMemberRadios = document.querySelectorAll('input[name="ieee-member"]');
+        const ieeeIdCard = document.getElementById('ieee-id-card');
+        const ieeeIdInput = document.getElementById('ieee-id');
+        
+        const videoContainer = document.getElementById('prank-video-container');
+        const video = document.getElementById('prank-video');
+
+
+        const handleIeeeMemberChange = () => {
+            const selected = document.querySelector('input[name="ieee-member"]:checked');
+            if (selected && selected.value === 'yes') {
+                ieeeIdCard.style.display = 'block';
+                ieeeIdInput.required = true;
+            } else {
+                ieeeIdCard.style.display = 'none';
+                ieeeIdInput.required = false;
+            }
+        };
+
+
+        ieeeMemberRadios.forEach(radio => {
+            radio.addEventListener('change', handleIeeeMemberChange);
+        });
+
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            let allValid = true;
+
+
+            document.querySelectorAll('.form-card.has-error').forEach(card => {
+                card.classList.remove('has-error');
+                card.querySelector('.error-message').style.display = 'none';
+            });
+            
+            const inputsToValidate = Array.from(form.querySelectorAll('[required]'));
+            
+            inputsToValidate.forEach(input => {
+                let isValid = true;
+                const card = input.closest('.form-card');
+                if (!card) return;
+
+
+                if (input.type === 'radio') {
+                    const radioGroup = document.querySelectorAll(`input[name="${input.name}"]`);
+                    if (!Array.from(radioGroup).some(r => r.checked)) {
+                       isValid = false;
+                    }
+                } else if (!input.value.trim()) {
+                    isValid = false;
+                } else if (input.type === 'email' && !/^\S+@\S+\.\S+$/.test(input.value)) {
+                    isValid = false;
+                }
+                
+                if (!isValid) {
+                    allValid = false;
+                    card.classList.add('has-error');
+                    card.querySelector('.error-message').style.display = 'block';
+                }
+            });
+
+
+            if (allValid) {
+                formContainer.style.opacity = '0';
+                setTimeout(() => {
+                    formContainer.style.display = 'none';
+                    videoContainer.style.display = 'flex';
+                    video.play();
+                    
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen().catch(err => console.log(err));
+                    } else if (video.webkitRequestFullscreen) {
+                        video.webkitRequestFullscreen().catch(err => console.log(err));
+                    } else if (video.msRequestFullscreen) {
+                        video.msRequestFullscreen();
+                    }
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
